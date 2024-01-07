@@ -16,8 +16,9 @@ function Menu() {
 
         const response = await fetch(`https://api.thingspeak.com/channels/CHANNEL_ID/fields/${fieldNumber}/last.json?api_key=${apiKey}`);
         */
-        const response = await fetch(`https://api.thingspeak.com/channels/CHANNEL_ID/fields/7JNHTJGWR1NBR2OX/last.json?api_key=1`);
-        const data = await response.json();
+        //const response = await fetch(`https://api.thingspeak.com/channels/CHANNEL_ID/fields/7JNHTJGWR1NBR2OX/last.json?api_key=1`);
+        
+        const response = await fetch(`https://api.thingspeak.com/update?api_key=7JNHTJGWR1NBR2OX&field1=0`);        const data = await response.json();
 
         if (data.field1) {
           setThingSpeakValue(data.field1);
