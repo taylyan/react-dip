@@ -10,10 +10,13 @@ function Menu() {
     // Функция за извличане на информация от ThingSpeak
     const fetchThingSpeakValue = async () => {
       try {
+        /*
         const apiKey = '7JNHTJGWR1NBR2OX'; // Заменете с ваш API ключ
         const fieldNumber = '1'; // Заменете с номера на полето, което искате да извлечете
 
         const response = await fetch(`https://api.thingspeak.com/channels/CHANNEL_ID/fields/${fieldNumber}/last.json?api_key=${apiKey}`);
+        */
+        const response = await fetch(`https://api.thingspeak.com/channels/CHANNEL_ID/fields/7JNHTJGWR1NBR2OX/last.json?api_key=1`);
         const data = await response.json();
 
         if (data.field1) {
